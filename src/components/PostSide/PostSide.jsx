@@ -11,3 +11,5 @@ export const PostSide = () => {
     </div>
   )
 }
+
+export default PostSide
