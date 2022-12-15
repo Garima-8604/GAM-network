@@ -27,7 +27,7 @@ const id = req.params.id
 const {currentUserId, currentUserAdminStatus, password} = req.body
 
 
-if(id==currentUserId || currentUserAdminStatus)
+if(id===currentUserId || currentUserAdminStatus)
 {
 
     if(password){
@@ -54,7 +54,7 @@ export const deleteUser = async ( req, res) => {
 
     const {currentUserId, currentUserAdminStatus} = req.body
 
-    if(currentUserId == id || currentUserAdminStatus){
+    if(currentUserId === id || currentUserAdminStatus){
         try {
             await UserModel.findOneAndDelete(id)
             res.status(200).json("User deleted successfully")
